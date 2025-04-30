@@ -1,0 +1,129 @@
+/* src/assets/Style/Education.css */
+
+/* Full-viewport white background and center content */
+.education-section {
+    width: 100vw;
+    min-height: 80vh;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    overflow-x: hidden;
+  }
+  
+  /* Section heading */
+  .education-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #111;
+  }
+  
+  /* Timeline line color override */
+  .vertical-timeline::before {
+    background-color: #000 !important;
+  }
+  
+  /* Icon circle styling */
+  .vertical-timeline-element-icon {
+    background: #000 !important;
+    color: #fff !important;
+  }
+  
+  /* Degree title styling */
+  .vertical-timeline-element-title {
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    color: #111 !important;
+    margin-bottom: 0.25rem;
+    text-align: justify !important;
+  }
+  
+  /* Institution subtitle styling */
+  .vertical-timeline-element-subtitle {
+    font-size: 1.125rem !important;
+    font-weight: 400 !important;
+    color: #6b7280 !important; /* gray tone */
+    margin-bottom: 0.5rem;
+    text-align: justify !important;
+  }
+  
+  /* Date styling */
+  .vertical-timeline-element-date {
+    color: #000 !important;
+  }
+  
+  /* GPA paragraph */
+  .edu-gpa {
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+  }
+  
+  /* Coursework list */
+  .edu-coursework h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .edu-coursework ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  .edu-coursework li {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Ensure content container sits above line */
+  .vertical-timeline-element-content {
+    z-index: 1;
+  }
+  /* Show/hide button */
+.details-toggle {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  color: #0c4a6e;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Coursework container visibility */
+.edu-coursework {
+  margin-top: 1rem;
+}
+
+.edu-coursework h5 {
+  /* ensure visible */
+  color: #111;
+}
+
+.edu-coursework ul {
+  /* ensure visible */
+  color: #374151;
+}
+
+@media (max-width: 640px) {
+  .education-heading {
+    font-size: 2rem;
+  }
+  .vertical-timeline-element-title {
+    font-size: 1.5rem !important;
+  }
+  .vertical-timeline-element-subtitle {
+    font-size: 1rem !important;
+  }
+  .edu-gpa {
+    font-size: 0.9rem;
+  }
+  .edu-coursework h5 {
+    font-size: 0.95rem;
+  }
+}
+
+  

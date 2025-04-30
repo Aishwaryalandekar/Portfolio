@@ -1,0 +1,107 @@
+/* src/assets/Style/Projects.css */
+
+/* Full-width section with white background and centered content */
+.projects-section {
+  width: 100vw;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  display: grid;
+  place-items: center;
+}
+
+/* Section heading */
+.projects-heading {
+  text-align: center;
+  font-size: 3rem; /* match experience heading */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+/* Grid layout: two columns, auto rows */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px; /* center content width */
+}
+
+/* Individual project card */
+.project-card {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title styling */
+.project-title {
+  font-size: 1.75rem; /* match vertical-timeline title */
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+/* Period styling */
+.project-period {
+  font-size: 1.125rem; /* match subtitle size */
+  font-weight: 400;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Description text */
+.project-desc {
+  font-size: 1rem;
+  color: #374151;
+  text-align: justify;
+  margin-bottom: 0.5rem;
+}
+
+/* Toggle button styling */
+.details-toggle {
+  background: none;
+  border: none;
+  color: #0c4a6e;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+  align-self: center;
+}
+
+/* Details list styling with proper hanging indent */
+.project-details {
+  display: none;
+  list-style-type: disc;
+  list-style-position: outside; /* bullets outside the text block */
+  margin: 0;
+  padding-left: 1.5rem; /* indent text block from card edge */
+  text-indent: 0; /* no extra indent on first line */
+  color: #374151;
+  font-size: 0.875rem;
+  text-align: justify;
+}
+.project-details li {
+  margin-bottom: 0.5rem;
+}
+.project-details.open {
+  display: block;
+}
+
+/* Responsive: single column on small screens */
+@media (max-width: 640px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  .projects-heading {
+    font-size: 2rem; /* match experience heading */
+    font-weight: 700;
+  }
+}

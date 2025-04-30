@@ -1,0 +1,172 @@
+/* src/assets/Style/Hero.css */
+
+/* Global reset (ensure no extra spacing) */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Navigation banner */
+.hero-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+  padding: 0.5rem 1rem;
+}
+.hero-nav ul {
+  display: flex;
+  justify-content: flex;
+  gap: 3rem;
+  list-style: none;
+  padding-left: 2rem; 
+}
+.hero-nav ul li {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+.hero-nav ul li:hover {
+  text-decoration: underline;
+}
+
+/* Hero background and centering */
+.hero-parallax {
+  width: 100vw;
+  min-height: 100vh;
+  background: url("/Portfolio/backgroundimage1.jpg") center 30% / cover fixed no-repeat;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding-top: 3rem; /* offset for nav */
+}
+
+/* Inner flex container for image + text */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: 90%;
+  max-width: 1100px;
+  text-align: left;
+}
+
+/* Profile picture sizing */
+.hero-inner .profile-img {
+  width: 15rem !important;
+  height: 15rem !important;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Text block */
+.hero-inner .hero-text {
+  color: #2D2D2D;
+  font-family: Inter, sans-serif;
+}
+
+.hero-inner .hero-text h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.hero-inner .hero-text p {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.hero-inner .hero-text p strong {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.hero-inner .hero-text .statement {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.6);
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-style: italic;
+}
+
+/* Hero links (email & LinkedIn) */
+.hero-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero-link {
+  color: #000; /* make link/icon black */
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-link .icon {
+  color: #000; /* ensure react-icons are black */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 2rem;
+    width: 95%;
+    text-align: center;
+  }
+
+  .hero-inner .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-inner .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-inner .hero-text p strong {
+    font-size: 1rem;
+  }
+
+  .hero-inner .hero-text .statement {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+
+  .hero-nav ul {
+    gap: 0.8rem;
+    padding-left: 0.7rem;
+  }
+
+  /* FIXED hero scroll issue */
+  .hero-parallax {
+    position: relative;
+    background: none !important;    /* clear the old background */
+    overflow: hidden;
+    height: 100vh !important;        /* ensure it stays full-screen */
+  }
+
+  .hero-parallax::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("/Portfolio/backgroundimage1.jpg") center 30% / cover no-repeat;
+    z-index: -1;
+    transform: translateZ(0);        /* force GPU compositing */
+    will-change: transform;
+  }
+}

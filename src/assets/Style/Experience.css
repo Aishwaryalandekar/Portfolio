@@ -1,0 +1,136 @@
+/* src/assets/Style/Experience.css */
+
+/* Full-viewport white background and centered content */
+.experience-section {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    overflow-x: hidden;
+  }
+  
+  /* Section heading */
+  .experience-heading {
+    text-align: center;
+    font-size: 3rem; /* increased for prominence */
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #111;
+  }
+  
+  /* Default timeline line: make it black */
+  .vertical-timeline::before {
+    background-color: #000 !important;
+  }
+  
+  /* Icon style override: black circle, white icon */
+  .vertical-timeline-element-icon {
+    background: #000 !important;
+    color: #fff !important;
+  }
+  
+  /* Title styling */
+  .vertical-timeline-element-title {
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.25rem;
+    color: #111 !important;
+    text-align: justify !important;
+  }
+  
+  /* Subtitle (company name & location) styling */
+  .vertical-timeline-element-subtitle {
+    font-size: 1.125rem !important;
+    font-weight: 400 !important;
+    color: #6b7280 !important; /* gray for distinction */
+    margin-bottom: 0.5rem;
+    text-align: justify !important;
+  }
+  
+  /* Date color */
+  .vertical-timeline-element-date {
+    color: #000 !important;
+  }
+  
+  /* Content justified */
+  .vertical-timeline-element-content {
+    text-align: justify !important;
+    z-index: 1;
+  }
+  
+  /* Summary text styling */
+  .timeline-summary {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #374151;
+  }
+  
+  /* Toggle button styling */
+  .details-toggle {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: none;
+    border: none;
+    color: #0c4a6e;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Detailed list styling */
+  .timeline-details {
+    margin-top: 1rem;
+    padding-left: 2rem;          /* indent content from bullet */
+    list-style-type: disc;       /* use disc bullets */
+    list-style-position: outside;/* wrap lines align under text, not bullet */
+    color: #374151;
+    text-align: justify;
+  }
+
+  /* Mobile adjustments */
+@media (max-width: 640px) {
+  .experience-section {
+    padding: 1rem;
+  }
+
+  .experience-heading {
+    font-size: 2rem;
+  }
+
+  /* Move the timeline line to near the left edge */
+  .vertical-timeline {
+    padding: 0; /* remove default horizontal padding */
+  }
+  .vertical-timeline::before {
+    left: 0.9rem;    /* position line at 1.5rem from left */
+  }
+
+  /* Align each icon on that same line */
+  .vertical-timeline-element-icon {
+    left: 0rem !important;
+    margin-top: 1.2rem; /* tweak vertical placement if needed */
+  }
+
+  /* Make content blocks full-width to the right of the line */
+  .vertical-timeline-element-content {
+    margin-left: calc(1.5rem + 1rem) !important; /* line + gutter */
+    width: calc(100% - (1.5rem + 2rem)) !important;
+    padding: 1rem !important;
+  }
+
+  /* Slightly smaller titles & subtitles */
+  .vertical-timeline-element-title {
+    font-size: 1.5rem !important;
+  }
+  .vertical-timeline-element-subtitle {
+    font-size: 1rem !important;
+  }
+
+  /* Ensure your detail lists don’t overflow */
+  .timeline-details {
+    padding-left: 1.5rem;
+  }
+}
+  
